@@ -4,6 +4,7 @@
   font-size: 2rem;
   font-weight: bolder;
   justify-content: center;
+  margin: 1rem;
 }
 
 .fetched-display p {

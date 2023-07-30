@@ -18,8 +18,8 @@ export default function Form({ onAddActivity }) {
   }
 
   return (
-    <section>
-      <h2>Add new activities</h2>
+    <section className="form-wrapper">
+      <h2>Add new activities:</h2>
       <form className="activity-form" onSubmit={handleSubmit}>
         <label htmlFor="name" className="activity-form__label">
           Activity:

@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -11,4 +16,11 @@ body {
     rgba(145, 200, 228, 1) 17%,
     rgba(116, 155, 194, 1) 100%
   );
+}
+
+h2 {
+  color: #27374d;
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0;
 }
