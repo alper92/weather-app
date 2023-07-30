@@ -2,11 +2,11 @@ import "./list.css";
 
 export default function List({ activities, isGoodWeather, onDeleteActivity }) {
   return (
-    <>
+    <section>
       <h2>
         {isGoodWeather
-          ? `The weather is awesome! Go outside and:`
-          : "Bad weather outside! Here's what you can do now:"}
+          ? `The weather is awesome! Go outside and`
+          : "Bad weather outside! Here's what you can do now"}
       </h2>
       <ul className="activity-list">
         {activities.map((activity) => (
@@ -16,6 +16,6 @@ export default function List({ activities, isGoodWeather, onDeleteActivity }) {
           </li>
         ))}
       </ul>
-    </>
+    </section>
   );
 }

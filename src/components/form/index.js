@@ -19,20 +19,21 @@ export default function Form({ onAddActivity }) {
 
   return (
     <section>
-      <h2>Add new Activity</h2>
+      <h2>Add new activities</h2>
       <form className="activity-form" onSubmit={handleSubmit}>
         <label htmlFor="name" className="activity-form__label">
-          Name:
+          Activity:
           <input
             type="text"
             id="name"
             name="name"
             className="activity-form__input"
+            required
           />
         </label>
 
         <label htmlFor="good-weather" className="activity-form__label">
-          Good-weather activity:
+          Is it a good weather acitivity?
           <input
             type="checkbox"
             id="good-weather"

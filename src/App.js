@@ -1,5 +1,6 @@
 import useLocalStorageState from "use-local-storage-state";
 import "./App.css";
+import Display from "./components/display/display";
 import Form from "./components/form";
 import List from "./components/list";
 import { useEffect, useState } from "react";
@@ -63,9 +64,7 @@ function App() {
   // ----------------- return App - visisble on website -----------------
   return (
     <div className="App">
-      <h1>
-        {condition} {temperature}
-      </h1>
+      <Display condition={condition} temperature={temperature} />
       <List
         activities={weatherActivity}
         isGoodWeather={isGoodWeather}
