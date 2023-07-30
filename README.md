@@ -1,6 +1,6 @@
 # Weather App
 
-## Fetching Data from an API with React
+## Fetching data from an API with React
 
 [API Link](https://example-apis.vercel.app/api/weather/europe)
 
