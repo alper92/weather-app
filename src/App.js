@@ -3,7 +3,7 @@ import "./App.css";
 import Display from "./components/display/display";
 import Form from "./components/form";
 import List from "./components/list";
-import ListAll from "./components/listall";
+import EditAll from "./components/edit";
 import { useEffect, useState } from "react";
 import { activityData } from "./components/data/data";
 
@@ -77,8 +77,9 @@ function App() {
         onDeleteActivity={handleDeleteActivity}
       />
       <Form onAddActivity={handleAddActivity} />
-      <ListAll
+      <EditAll
         activities={activities}
+        setActivities={setActivities}
         onHandleDeleteActivity={handleDeleteActivity}
       />
     </main>

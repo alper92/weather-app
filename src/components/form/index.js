@@ -42,7 +42,7 @@ export default function Form({ onAddActivity }) {
           />
         </label>
 
-        <button type="submit">Submit</button>
+        <button type="submit">add activity</button>
       </form>
     </section>
   );

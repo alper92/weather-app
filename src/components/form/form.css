@@ -44,7 +44,3 @@ button {
   letter-spacing: 0.1rem;
   font-weight: bolder;
 }
-
-button:hover {
-  background: #597897;
-}
