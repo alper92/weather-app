@@ -1,8 +1,8 @@
 import useLocalStorageState from "use-local-storage-state";
 import "./App.css";
 import Display from "./components/display/display";
-import Form from "./components/form";
-import List from "./components/list";
+import AddActivitForm from "./components/form";
+import Decider from "./components/decider";
 import EditAll from "./components/edit";
 import { useEffect, useState } from "react";
 import { activityData } from "./components/data/data";
@@ -70,12 +70,12 @@ function App() {
       </header>
       <main className="App">
         <Display condition={condition} temperature={temperature} />
-        <List
+        <Decider
           activities={weatherActivity}
           isGoodWeather={isGoodWeather}
           onDeleteActivity={handleDeleteActivity}
         />
-        <Form onAddActivity={handleAddActivity} />
+        <AddActivitForm onAddActivity={handleAddActivity} />
         <EditAll
           activities={activities}
           setActivities={setActivities}

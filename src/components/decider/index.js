@@ -1,9 +1,9 @@
 import { useState } from "react";
-import "./list.css";
+import "./decider.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfo } from "@fortawesome/free-solid-svg-icons";
 
-export default function List({ activities, isGoodWeather }) {
+export default function Decider({ activities, isGoodWeather }) {
   const [randomActivitiy, setRandomActivity] = useState([]);
   const activityCount = activities.length;
 

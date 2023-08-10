@@ -1,7 +1,7 @@
 import { uid } from "uid";
 import "./form.css";
 
-export default function Form({ onAddActivity }) {
+export default function AddActivitForm({ onAddActivity }) {
   // ----------------- handle submit function -----------------
   function handleSubmit(event) {
     event.preventDefault();
