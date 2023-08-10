@@ -17,7 +17,7 @@ function App() {
     defaultValue: activityData,
   });
 
-  // ----------------- add Activity to body -----------------
+  // ----------------- add Activity -----------------
   function handleAddActivity(newActivity) {
     const activitiesWithNewActivity = [newActivity, ...activities];
     setActivities(activitiesWithNewActivity);
@@ -59,6 +59,7 @@ function App() {
     return () => clearInterval(interval);
   }, []);
 
+  // ----------------- filter activities depending on the current weather -----------------
   const weatherActivity = activities.filter(
     (activity) => activity.isForGoodWeather === isGoodWeather
   );
@@ -66,7 +67,9 @@ function App() {
   // ----------------- return App - visisble on website -----------------
   return (
     <main className="App">
-      <h1>Weather And Activity App</h1>
+      <header>
+        <h1>Weather And Activity App</h1>
+      </header>
       <Display condition={condition} temperature={temperature} />
       <List
         activities={weatherActivity}
