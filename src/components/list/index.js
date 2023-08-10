@@ -15,17 +15,15 @@ export default function List({ activities, isGoodWeather }) {
   }
 
   return (
-    <section className="list-wrapper">
+    <section className="display-activity-wrapper">
       <h2>
         {isGoodWeather
           ? `The weather is awesome! Go outside and`
           : "Bad weather outside! Here's what you can do now"}
       </h2>
-      <article className="activity-list">
+      <article>
         {randomActivitiy.name ? (
-          <p className="random-suggestion">
-            <i>{randomActivitiy.name}</i>
-          </p>
+          <p className="random-suggestion">{randomActivitiy.name}</p>
         ) : (
           <p className="random-suggestion-start">
             <i>
@@ -34,19 +32,10 @@ export default function List({ activities, isGoodWeather }) {
             </i>
           </p>
         )}
-        <button
-          className="random-button"
-          onClick={() => handleRandomActivity()}>
-          make random decision
-        </button>
       </article>
-      <ul className="activity-list">
-        {activities.map((activity) => (
-          <li key={activity.id} className="activity-list__item">
-            {activity.name}
-          </li>
-        ))}
-      </ul>
+      <button className="random-button" onClick={() => handleRandomActivity()}>
+        randomly decide
+      </button>
     </section>
   );
 }
