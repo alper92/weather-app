@@ -66,23 +66,25 @@ function App() {
 
   // ----------------- return App - visisble on website -----------------
   return (
-    <main className="App">
+    <>
       <header>
-        <h1>Weather And Activity App</h1>
+        <h1>Weather-Activity-App</h1>
       </header>
-      <Display condition={condition} temperature={temperature} />
-      <List
-        activities={weatherActivity}
-        isGoodWeather={isGoodWeather}
-        onDeleteActivity={handleDeleteActivity}
-      />
-      <Form onAddActivity={handleAddActivity} />
-      <EditAll
-        activities={activities}
-        setActivities={setActivities}
-        onHandleDeleteActivity={handleDeleteActivity}
-      />
-    </main>
+      <main className="App">
+        <Display condition={condition} temperature={temperature} />
+        <List
+          activities={weatherActivity}
+          isGoodWeather={isGoodWeather}
+          onDeleteActivity={handleDeleteActivity}
+        />
+        <Form onAddActivity={handleAddActivity} />
+        <EditAll
+          activities={activities}
+          setActivities={setActivities}
+          onHandleDeleteActivity={handleDeleteActivity}
+        />
+      </main>
+    </>
   );
 }
 
