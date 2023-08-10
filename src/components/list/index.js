@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./list.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
+import { faInfo } from "@fortawesome/free-solid-svg-icons";
 
 export default function List({ activities, isGoodWeather }) {
   const [randomActivitiy, setRandomActivity] = useState([]);
@@ -27,7 +27,7 @@ export default function List({ activities, isGoodWeather }) {
         ) : (
           <p className="random-suggestion-start">
             <i>
-              <FontAwesomeIcon className="info" icon={faCircleInfo} />
+              <FontAwesomeIcon className="info" icon={faInfo} />
               make sure to add some activities
             </i>
           </p>
