@@ -3,16 +3,18 @@ import "./App.css";
 import Display from "./components/display/display";
 import Form from "./components/form";
 import List from "./components/list";
+import ListAll from "./components/listall";
 import { useEffect, useState } from "react";
+import { activityData } from "./components/data/data";
 
 function App() {
-  // ----------------- use state weather object from the api -----------------
+  // ----------------- state weather object from the api -----------------
   const [weather, setWeather] = useState({});
 
   // ----------------- state for acivities list -----------------
 
   const [activities, setActivities] = useLocalStorageState("activities", {
-    defaultValue: [],
+    defaultValue: activityData,
   });
 
   // ----------------- add Activity to body -----------------
@@ -21,7 +23,7 @@ function App() {
     setActivities(activitiesWithNewActivity);
   }
 
-  // ----------------- delet Activity -----------------
+  // ----------------- delete Activity -----------------
   function handleDeleteActivity(id) {
     const activitiesWithoutDeletedActivity = activities.filter(
       (activity) => activity.id !== id
@@ -63,7 +65,8 @@ function App() {
 
   // ----------------- return App - visisble on website -----------------
   return (
-    <div className="App">
+    <main className="App">
+      <h1>Weather And Activity App</h1>
       <Display condition={condition} temperature={temperature} />
       <List
         activities={weatherActivity}
@@ -71,7 +74,11 @@ function App() {
         onDeleteActivity={handleDeleteActivity}
       />
       <Form onAddActivity={handleAddActivity} />
-    </div>
+      <ListAll
+        activities={activities}
+        onHandleDeleteActivity={handleDeleteActivity}
+      />
+    </main>
   );
 }
 

@@ -1,0 +1,23 @@
+.listall {
+  margin: 0 1rem;
+  list-style-type: none;
+  background: #f6f4eb;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.listall button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #749bc2;
+  font-weight: bolder;
+  font-size: 0.8rem;
+}
+
+.listall button:hover {
+  color: orangered;
+}
