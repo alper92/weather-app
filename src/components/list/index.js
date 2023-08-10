@@ -3,7 +3,7 @@ import "./list.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 
-export default function List({ activities, isGoodWeather, onDeleteActivity }) {
+export default function List({ activities, isGoodWeather }) {
   const [randomActivitiy, setRandomActivity] = useState([]);
 
   function handleRandomActivity() {
@@ -36,8 +36,7 @@ export default function List({ activities, isGoodWeather, onDeleteActivity }) {
         )}
         <button
           className="random-button"
-          onClick={() => handleRandomActivity()}
-        >
+          onClick={() => handleRandomActivity()}>
           make random decision
         </button>
       </article>

@@ -1,4 +1,4 @@
-.listall {
+.edit-all-card {
   margin: 0 1rem;
   list-style-type: none;
   background: #f6f4eb;
@@ -9,7 +9,7 @@
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-.listall button {
+.delete-item {
   cursor: pointer;
   border: none;
   background: none;
@@ -18,6 +18,21 @@
   font-size: 0.8rem;
 }
 
-.listall button:hover {
+.delete-item:hover {
   color: orangered;
+}
+
+.data-button {
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 1rem;
+  padding: 2px 16px;
+  margin: 0.5rem 1rem 0 0;
+  min-width: 60px;
+  min-height: 32px;
+  border: none;
+  color: #fff;
+  background-color: #86888b;
+  transition: background-color 0.17s ease, color 0.17s ease;
 }
