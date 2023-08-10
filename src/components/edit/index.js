@@ -8,10 +8,20 @@ export default function ListAll({
   onHandleDeleteActivity,
   setActivities,
 }) {
+  const goodWeatherActivities = activities.filter(
+    (count) => count.isForGoodWeather === true
+  ).length;
+  const badWeatherActivities = activities.filter(
+    (count) => count.isForGoodWeather === false
+  ).length;
+
   return (
     <section>
       <h2>Edit all activities:</h2>
       <article className="edit-all-card">
+        <h3>
+          {goodWeatherActivities} ☀️ / {badWeatherActivities} 🌧️
+        </h3>
         <ul>
           {activities.map(({ id, name, isForGoodWeather }) => (
             <li key={id}>

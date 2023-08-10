@@ -46,3 +46,7 @@
   background-color: #06295b;
   color: white;
 }
+
+.random-button:hover {
+  background: #05377e;
+}

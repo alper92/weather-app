@@ -5,9 +5,10 @@ import { faInfo } from "@fortawesome/free-solid-svg-icons";
 
 export default function List({ activities, isGoodWeather }) {
   const [randomActivitiy, setRandomActivity] = useState([]);
+  const activityCount = activities.length;
 
   function handleRandomActivity() {
-    if (activities.length > 0) {
+    if (activityCount > 0) {
       const randomActivitiy =
         activities[Math.floor(Math.random() * activities.length)];
       setRandomActivity(randomActivitiy);
@@ -28,13 +29,13 @@ export default function List({ activities, isGoodWeather }) {
           <p className="random-suggestion-start">
             <i>
               <FontAwesomeIcon className="info" icon={faInfo} />
-              make sure to add some activities
+              you have {activityCount} activities to choose
             </i>
           </p>
         )}
       </article>
       <button className="random-button" onClick={() => handleRandomActivity()}>
-        randomly decide
+        let the app decide
       </button>
     </section>
   );

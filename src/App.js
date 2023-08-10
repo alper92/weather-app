@@ -11,8 +11,6 @@ function App() {
   // ----------------- state weather object from the api -----------------
   const [weather, setWeather] = useState({});
 
-  // ----------------- state for acivities list -----------------
-
   const [activities, setActivities] = useLocalStorageState("activities", {
     defaultValue: activityData,
   });

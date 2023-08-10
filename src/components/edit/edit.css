@@ -9,6 +9,11 @@
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
+.ratio {
+  text-align: center;
+  margin: 0.5rem;
+}
+
 .delete-item {
   cursor: pointer;
   border: none;
