@@ -10,22 +10,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(
-    304deg,
-    rgba(145, 200, 228, 1) 17%,
+    150deg,
+    rgb(189, 222, 239) 5%,
     rgba(116, 155, 194, 1) 100%
   );
 }
 
-@media (max-width: 390px) {
-  body {
-    height: 100%;
-  }
-}
 h1 {
   text-align: center;
   margin: 2rem;
+  font-size: 2.5rem;
 }
 
 h2 {
@@ -51,7 +47,7 @@ button {
   font-size: 12px;
   line-height: 1rem;
   padding: 2px 16px;
-  margin: 0.5rem 1rem 0 0;
+  margin: 0.5rem;
   min-height: 32px;
   border: none;
   text-transform: uppercase;

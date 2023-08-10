@@ -1,7 +1,7 @@
 import { uid } from "uid";
 import "./form.css";
 
-export default function Form({ onAddActivity }) {
+export default function AddActivitForm({ onAddActivity }) {
   // ----------------- handle submit function -----------------
   function handleSubmit(event) {
     event.preventDefault();
@@ -19,29 +19,26 @@ export default function Form({ onAddActivity }) {
 
   return (
     <section className="form-wrapper">
-      <h2>Add new activities:</h2>
+      <h2>Add activities:</h2>
       <form className="activity-form" onSubmit={handleSubmit}>
-        <label htmlFor="name" className="activity-form__label">
-          Activity:
-          <input
-            type="text"
-            id="name"
-            name="name"
-            className="activity-form__input"
-            required
-          />
-        </label>
-
+        <label htmlFor="name" className="activity-form__label"></label>
+        <input
+          type="text"
+          placeholder="type in your activity here..."
+          id="name"
+          name="name"
+          className="activity-form__input"
+          required
+        />
         <label htmlFor="good-weather" className="activity-form__label">
           Is it a good weather acitivity?
-          <input
-            type="checkbox"
-            id="good-weather"
-            name="isForGoodWeather"
-            className="activity-form__input"
-          />
         </label>
-
+        <input
+          type="checkbox"
+          id="good-weather"
+          name="isForGoodWeather"
+          className="activity-form__input"
+        />
         <button className="add-activity-button" type="submit">
           add activity
         </button>

@@ -1,13 +1,14 @@
 import { useState } from "react";
-import "./list.css";
+import "./decider.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
+import { faInfo } from "@fortawesome/free-solid-svg-icons";
 
-export default function List({ activities, isGoodWeather }) {
+export default function Decider({ activities, isGoodWeather }) {
   const [randomActivitiy, setRandomActivity] = useState([]);
+  const activityCount = activities.length;
 
   function handleRandomActivity() {
-    if (activities.length > 0) {
+    if (activityCount > 0) {
       const randomActivitiy =
         activities[Math.floor(Math.random() * activities.length)];
       setRandomActivity(randomActivitiy);
@@ -19,7 +20,7 @@ export default function List({ activities, isGoodWeather }) {
       <h2>
         {isGoodWeather
           ? `The weather is awesome! Go outside and`
-          : "Bad weather outside! Here's what you can do now"}
+          : "Bad weather outside! You should"}
       </h2>
       <article>
         {randomActivitiy.name ? (
@@ -27,14 +28,14 @@ export default function List({ activities, isGoodWeather }) {
         ) : (
           <p className="random-suggestion-start">
             <i>
-              <FontAwesomeIcon className="info" icon={faCircleInfo} />
-              make sure to add some activities
+              <FontAwesomeIcon className="info" icon={faInfo} />
+              you have {activityCount} activities to choose
             </i>
           </p>
         )}
       </article>
       <button className="random-button" onClick={() => handleRandomActivity()}>
-        randomly decide
+        let the app decide
       </button>
     </section>
   );

@@ -1,8 +1,8 @@
 import useLocalStorageState from "use-local-storage-state";
 import "./App.css";
 import Display from "./components/display/display";
-import Form from "./components/form";
-import List from "./components/list";
+import AddActivitForm from "./components/form";
+import Decider from "./components/decider";
 import EditAll from "./components/edit";
 import { useEffect, useState } from "react";
 import { activityData } from "./components/data/data";
@@ -10,8 +10,6 @@ import { activityData } from "./components/data/data";
 function App() {
   // ----------------- state weather object from the api -----------------
   const [weather, setWeather] = useState({});
-
-  // ----------------- state for acivities list -----------------
 
   const [activities, setActivities] = useLocalStorageState("activities", {
     defaultValue: activityData,
@@ -66,23 +64,25 @@ function App() {
 
   // ----------------- return App - visisble on website -----------------
   return (
-    <main className="App">
+    <>
       <header>
-        <h1>Weather And Activity App</h1>
+        <h1>Weather-Activity-App</h1>
       </header>
-      <Display condition={condition} temperature={temperature} />
-      <List
-        activities={weatherActivity}
-        isGoodWeather={isGoodWeather}
-        onDeleteActivity={handleDeleteActivity}
-      />
-      <Form onAddActivity={handleAddActivity} />
-      <EditAll
-        activities={activities}
-        setActivities={setActivities}
-        onHandleDeleteActivity={handleDeleteActivity}
-      />
-    </main>
+      <main className="App">
+        <Display condition={condition} temperature={temperature} />
+        <Decider
+          activities={weatherActivity}
+          isGoodWeather={isGoodWeather}
+          onDeleteActivity={handleDeleteActivity}
+        />
+        <AddActivitForm onAddActivity={handleAddActivity} />
+        <EditAll
+          activities={activities}
+          setActivities={setActivities}
+          onHandleDeleteActivity={handleDeleteActivity}
+        />
+      </main>
+    </>
   );
 }
 
