@@ -17,6 +17,7 @@ export default function ListAll({
             <li key={id}>
               <button
                 className="delete-item"
+                aria-label="delete this item"
                 onClick={() => onHandleDeleteActivity(id)}>
                 <FontAwesomeIcon icon={faTrash} />
               </button>
@@ -27,10 +28,14 @@ export default function ListAll({
         </ul>
         <button
           className="data-button"
+          aria-label="set default activities"
           onClick={() => setActivities(activityData)}>
           set default
         </button>
-        <button className="data-button" onClick={() => setActivities([])}>
+        <button
+          className="data-button"
+          aria-label="delete all activities"
+          onClick={() => setActivities([])}>
           delete all
         </button>
       </article>

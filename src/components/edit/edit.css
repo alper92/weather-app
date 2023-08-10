@@ -26,6 +26,10 @@
 
 .data-button {
   color: #fff;
-  background-color: #86888b;
+  background-color: #06295b;
   transition: background-color 0.17s ease, color 0.17s ease;
+}
+
+.data-button:hover {
+  background: #05377e;
 }

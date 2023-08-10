@@ -10,10 +10,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100vh;
+  height: 110vh;
   background: linear-gradient(
-    304deg,
-    rgba(145, 200, 228, 1) 17%,
+    150deg,
+    rgb(189, 222, 239) 5%,
     rgba(116, 155, 194, 1) 100%
   );
 }

@@ -35,10 +35,10 @@ input[type="text"] {
 
 .add-activity-button {
   font-size: 1rem;
-  background: #749bc2;
+  background-color: #06295b;
   color: white;
 }
 
 .add-activity-button:hover {
-  background: #597897;
+  background: #05377e;
 }

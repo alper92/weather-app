@@ -19,7 +19,7 @@ export default function List({ activities, isGoodWeather }) {
       <h2>
         {isGoodWeather
           ? `The weather is awesome! Go outside and`
-          : "Bad weather outside! Here's what you can do now"}
+          : "Bad weather outside! You should"}
       </h2>
       <article>
         {randomActivitiy.name ? (
