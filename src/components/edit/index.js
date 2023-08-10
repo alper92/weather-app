@@ -1,5 +1,7 @@
 import "./edit.css";
 import { activityData } from "../data/data";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 export default function ListAll({
   activities,
@@ -8,7 +10,7 @@ export default function ListAll({
 }) {
   return (
     <section>
-      <h2>Edit all activities overview:</h2>
+      <h2>Edit all activities:</h2>
       <article className="edit-all-card">
         <ul>
           {activities.map(({ id, name, isForGoodWeather }) => (
@@ -16,25 +18,20 @@ export default function ListAll({
               <button
                 className="delete-item"
                 onClick={() => onHandleDeleteActivity(id)}>
-                X
+                <FontAwesomeIcon icon={faTrash} />
               </button>
-              <b>
-                <q>{name}</q>{" "}
-              </b>
-              was saved as a
-              {isForGoodWeather
-                ? " good weather activity"
-                : " bad weather activity"}
+              <b>{name} </b>
+              {isForGoodWeather ? " (good weather)" : " (bad weather)"}
             </li>
           ))}
         </ul>
         <button
           className="data-button"
           onClick={() => setActivities(activityData)}>
-          set default acivities
+          set default
         </button>
         <button className="data-button" onClick={() => setActivities([])}>
-          delete all acivities
+          delete all
         </button>
       </article>
     </section>
